@@ -1,0 +1,24 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "inferno-scripts": "0.9.0",
+    "node-pre-gyp": "0.6.32"
+  },
+  "dependencies": {
+    "inferno": "1.0.0-beta36",
+    "inferno-component": "1.0.0-beta36",
+    "mobx": "^2.7.0",
+    "mobx-inferno": "^0.2.1"
+  },
+  "scripts": {
+    "start": "inferno-scripts start",
+    "build": "inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "inferno-app"
+  }
+}
