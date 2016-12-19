@@ -5,8 +5,7 @@ import Logo from './logo';
 import './App.css';
 
 class App extends Component {
-  render(store) {
-    const { completedTodosCount, report } = this.props.store;
+  render({store}) {
     return (
       <div className="App">
         <div className="App-header">
@@ -16,8 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>completed todos: {completedTodosCount}</p>
-        <p>report: {report}</p>
+        <p>store: {store.title}</p>
       </div>
     );
   }
