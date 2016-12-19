@@ -15,7 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>store: {store.title}</p>
+        <p>store: {store.todos[0].task}</p>
       </div>
     );
   }
