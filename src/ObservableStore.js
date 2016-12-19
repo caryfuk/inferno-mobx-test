@@ -8,27 +8,19 @@ class Store {
 			    todo => todo.completed === true
 		    ).length;
 			}),
-			report: computed(() => {
-		    if (this.todos.length === 0)
-			    return "<none>";
-		    return `Next todo: "${this.todos[0].task}". ` + 
-			    `Progress: ${this.completedTodosCount}/${this.todos.length}`; 
-			})
+			report: computed(() => `Progress: ${this.completedTodosCount}/${this.todos.length}`),
+			todos: []
     })
   }
-
-  todos = []
 
 	addTodo(task) {
 		this.todos.push({ 
 			task: task,
-			completed: false,
-			assignee: null
+			completed: false
 		});
 	}
 }
 
 const ObservableStore = new Store();
-ObservableStore.addTodo('test');
 
 export default ObservableStore;

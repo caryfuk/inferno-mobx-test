@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "inferno-mobx test",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

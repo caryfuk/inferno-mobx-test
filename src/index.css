@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
 }
+
+ul {
+  list-style: none
+}

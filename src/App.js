@@ -15,7 +15,28 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>store: {store.todos[0].task}</p>
+        <p>
+          edit new entry:
+          <input
+            onKeyUp={
+              () => {
+                if (event.code === 'Enter') {
+                  store.addTodo(event.target.value);
+                  event.target.value=''
+                }
+              }
+            } />
+        </p>
+        <p>store:</p>
+        <ul>
+          {store.todos.map(
+            (todo, idx) => <li key={idx} onClick={() => {todo.completed = true}} style={todo.completed ? 'color: #0f0' : ''}>
+              {todo.task}
+            </li>
+          )}
+        </ul>
+        <p>completed todos: {store.completedTodosCount}</p>
+        <p>computed: {store.report}</p>
       </div>
     );
   }
