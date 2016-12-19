@@ -9,8 +9,8 @@
   "dependencies": {
     "inferno": "1.0.0-beta36",
     "inferno-component": "1.0.0-beta36",
-    "mobx": "^2.7.0",
-    "mobx-inferno": "^0.2.1"
+    "inferno-mobx": "1.0.0-beta36",
+    "mobx": "^2.7.0"
   },
   "scripts": {
     "start": "inferno-scripts start",

@@ -1,6 +1,6 @@
-import { extendObservable, autorun } from "mobx";
+import { extendObservable } from "mobx";
 
-class Store {
+export default class Store {
   constructor() {
     extendObservable(this, {
       get completedTodosCount() {
@@ -16,7 +16,6 @@ class Store {
           `Progress: ${this.completedTodosCount}/${this.todos.length}`;
       }
     });
-    autorun(() => console.log(this.report));
   }
 
   todos = [];
@@ -29,5 +28,3 @@ class Store {
     });
   }
 }
-
-export default Store;

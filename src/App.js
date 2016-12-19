@@ -1,11 +1,11 @@
 import Inferno from 'inferno';
 import Component from 'inferno-component';
-import { observer } from "mobx-inferno";
+import { connect } from "inferno-mobx";
 import Logo from './logo';
 import './App.css';
 
 class App extends Component {
-  render() {
+  render(store) {
     const { completedTodosCount, report } = this.props.store;
     return (
       <div className="App">
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default observer(App);
+export default connect(['store'])(App);
