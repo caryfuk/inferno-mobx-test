@@ -30,8 +30,12 @@ class App extends Component {
         <p>store:</p>
         <ul>
           {store.todos.map(
-            (todo, idx) => <li key={idx} onClick={() => {todo.completed = true}} style={todo.completed ? 'color: #0f0' : ''}>
-              {todo.task}
+            (todo, idx) =>
+              <li
+                key={idx}
+                onClick={() => {todo.completed = true}}
+                style={todo.completed ? 'color: #0f0' : ''}>
+                  {todo.task}
             </li>
           )}
         </ul>
